@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="id.ramadani.javanworkshop.Learn1Activity">
+
+    <ImageView
+        android:id="@+id/img_indo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/candi_borobudur" />
+
+    <TextView
+        android:id="@+id/tv_indonesia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wonderful_indonesia"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignBottom="@id/img_indo"
+        android:layout_alignRight="@id/img_indo"
+        android:paddingRight="@dimen/fab_margin"
+        android:paddingBottom="@dimen/fab_margin" />
+
+    <ImageView
+        android:id="@+id/img_bromo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_indo" />
+
+    <TextView
+        android:id="@+id/tv_bromo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignBottom="@id/img_bromo"
+        android:layout_alignLeft="@id/img_bromo"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingBottom="@dimen/fab_margin" />
+
+</RelativeLayout>
