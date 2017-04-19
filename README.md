@@ -1,5 +1,9 @@
 # Javan Android Workshop
 
+> Choose a job you love and you will never have to work a day of your life.
+
+—Confucius
+
 ## TextView dan ImageView
 
 <img src="textview-imageview.png" width="340">
