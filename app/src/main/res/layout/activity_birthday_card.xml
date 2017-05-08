@@ -19,6 +19,7 @@
         android:textSize="36sp"
         android:fontFamily="sans-serif-light"
         android:textColor="@android:color/white"
+        android:padding="20dp"
         android:text="@string/greeting_for" />
 
     <TextView
@@ -29,5 +30,6 @@
         android:textSize="36sp"
         android:fontFamily="sans-serif-light"
         android:textColor="@android:color/white"
+        android:padding="20dp"
         android:text="@string/greeting_from" />
 </RelativeLayout>
