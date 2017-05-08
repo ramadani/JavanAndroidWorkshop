@@ -6,20 +6,25 @@
     android:layout_height="match_parent"
     tools:context="id.ramadani.javanworkshop.BirthdayCardActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/androidparty"
+        android:contentDescription="@string/happy_birthday" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/greeting_for" />
+        android:text="@string/greeting_for"
+        android:textSize="36sp"
+        android:fontFamily="sans-serif-light" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/greeting_from"
         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/androidparty" />
+        android:layout_alignParentBottom="true"
+        android:textSize="36sp"
+        android:fontFamily="sans-serif-light" />
 </RelativeLayout>
