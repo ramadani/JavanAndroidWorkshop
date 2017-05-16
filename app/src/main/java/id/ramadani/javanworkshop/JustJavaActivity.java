@@ -8,7 +8,6 @@ import android.widget.TextView;
 import java.text.NumberFormat;
 
 public class JustJavaActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,8 +16,19 @@ public class JustJavaActivity extends AppCompatActivity {
     }
 
     public void submitOrder(View view) {
-        display(2);
-        displayPrice(2 * 5);
+        int quantity = 5;
+        display(quantity);
+        displayPrice(quantity * 5);
+    }
+
+    public void increment(View view) {
+        int quantity = 3;
+        display(quantity);
+    }
+
+    public void decrement(View view) {
+        int quantity = 1;
+        display(quantity);
     }
 
     private void display(int number) {
