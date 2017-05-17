@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import java.text.NumberFormat;
-
 public class JustJavaActivity extends AppCompatActivity {
     int quantity = 0;
 
@@ -16,11 +14,11 @@ public class JustJavaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_just_java);
         setTitle(R.string.just_java);
         display(quantity);
-        displayPrice(quantity * 5);
     }
 
     public void submitOrder(View view) {
-        displayPrice(quantity * 5);
+        String priceMessage = "Total: $" + (quantity * 5) + "\nThank you!";
+        displayMessage(priceMessage);
     }
 
     public void increment(View view) {
@@ -38,8 +36,8 @@ public class JustJavaActivity extends AppCompatActivity {
         tvQuantity.setText(String.valueOf(number));
     }
 
-    private void displayPrice(int number) {
+    private void displayMessage(String message) {
         TextView tvPrice = (TextView) findViewById(R.id.tv_price);
-        tvPrice.setText(NumberFormat.getCurrencyInstance().format(number));
+        tvPrice.setText(message);
     }
 }
