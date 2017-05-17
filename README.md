@@ -6,7 +6,10 @@
 
 ## Just Java
 
-From lesson 5 on [Android Development For Beginner][udacity_link]
+From lesson 5 and 6 on [Android Development For Beginner][udacity_link]
+
+<img src="image.png" width="340">
+
 
 ## Previous
 

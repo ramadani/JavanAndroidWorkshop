@@ -7,4 +7,7 @@
     <string name="greeting_from">From, Dani!</string>
 
     <string name="just_java">Just Java</string>
+    <string name="quantity">Quantity</string>
+    <string name="price">Price</string>
+    <string name="order">Order</string>
 </resources>
