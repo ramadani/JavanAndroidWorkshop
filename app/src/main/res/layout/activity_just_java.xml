@@ -14,25 +14,33 @@
         android:layout_marginBottom="@dimen/fab_margin"
         android:textAllCaps="true" />
 
-    <Button
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:onClick="increment"
-        android:text="+" />
-
-    <TextView
-        android:id="@+id/tv_quantity"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textColor="@android:color/black"
-        android:text="2" />
+        android:orientation="horizontal">
 
-    <Button
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:onClick="decrement"
-        android:text="-" />
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:onClick="decrement"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/tv_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:text="2" />
+
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:onClick="increment"
+            android:text="+" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"

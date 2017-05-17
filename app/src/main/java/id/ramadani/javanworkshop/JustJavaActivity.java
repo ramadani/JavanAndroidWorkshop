@@ -16,6 +16,7 @@ public class JustJavaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_just_java);
         setTitle(R.string.just_java);
         display(quantity);
+        displayPrice(quantity * 5);
     }
 
     public void submitOrder(View view) {
