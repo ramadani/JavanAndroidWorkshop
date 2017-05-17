@@ -8,11 +8,14 @@ import android.widget.TextView;
 import java.text.NumberFormat;
 
 public class JustJavaActivity extends AppCompatActivity {
+    int quantity = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_just_java);
         setTitle(R.string.just_java);
+        display(quantity);
     }
 
     public void submitOrder(View view) {
@@ -22,13 +25,11 @@ public class JustJavaActivity extends AppCompatActivity {
     }
 
     public void increment(View view) {
-        int quantity = 2;
         quantity = quantity + 1;
         display(quantity);
     }
 
     public void decrement(View view) {
-        int quantity = 2;
         quantity = quantity - 1;
         display(quantity);
     }
