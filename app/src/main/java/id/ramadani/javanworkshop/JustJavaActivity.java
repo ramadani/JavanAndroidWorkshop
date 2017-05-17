@@ -8,7 +8,7 @@ import android.widget.TextView;
 import java.text.NumberFormat;
 
 public class JustJavaActivity extends AppCompatActivity {
-    int quantity = 1;
+    int quantity = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +19,6 @@ public class JustJavaActivity extends AppCompatActivity {
     }
 
     public void submitOrder(View view) {
-        int quantity = 5;
-        display(quantity);
         displayPrice(quantity * 5);
     }
 
