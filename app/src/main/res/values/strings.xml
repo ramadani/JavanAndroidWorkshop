@@ -10,4 +10,6 @@
     <string name="quantity">Quantity</string>
     <string name="price">Price</string>
     <string name="order">Order</string>
+
+    <string name="court_counter">Court Counter</string>
 </resources>

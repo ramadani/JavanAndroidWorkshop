@@ -11,7 +11,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Learn1Activity" />
         <activity android:name=".BirthdayCardActivity" />
-        <activity android:name=".JustJavaActivity">
+        <activity android:name=".JustJavaActivity" />
+        <activity android:name=".CourtCounterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
