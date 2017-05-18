@@ -15,10 +15,11 @@
         android:text="Team A" />
 
     <TextView
+        android:id="@+id/tv_team_a_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/fab_margin"
-        android:text="3" />
+        android:text="0" />
 
     <Button
         android:id="@+id/btn_3_points"
@@ -26,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/fab_margin"
         android:textAllCaps="true"
+        android:onClick="addThreeForTeamA"
         android:text="+3 points" />
 
     <Button
@@ -34,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/fab_margin"
         android:textAllCaps="true"
+        android:onClick="addTwoForTeamA"
         android:text="+2 points" />
 
     <Button
@@ -41,5 +44,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="true"
+        android:onClick="addOneForTeamA"
         android:text="Free Throw" />
 </LinearLayout>
