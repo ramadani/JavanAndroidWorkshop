@@ -52,6 +52,13 @@ public class CourtCounterActivity extends AppCompatActivity {
         displayForTeamB(scoreTeamB);
     }
 
+    public void reset(View view) {
+        scoreTeamA = scoreTeamB = 0;
+
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
+    }
+
     private void displayForTeamA(int score) {
         TextView scoreTeamA = (TextView) findViewById(R.id.tv_team_a_score);
         scoreTeamA.setText(String.valueOf(score));
