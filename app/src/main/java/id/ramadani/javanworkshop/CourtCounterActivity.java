@@ -11,6 +11,7 @@ public class CourtCounterActivity extends AppCompatActivity {
     private final int POINT_FOR_FREE_THROW = 1;
 
     private int scoreTeamA = 0;
+    private int scoreTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +37,28 @@ public class CourtCounterActivity extends AppCompatActivity {
         displayForTeamA(scoreTeamA);
     }
 
+    public void addThreeForTeamB(View view) {
+        scoreTeamB += POINT_FOR_THREE_POINT;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void addTwoForTeamB(View view) {
+        scoreTeamB += POINT_FOR_TWO_POINT;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void addOneForTeamB(View view) {
+        scoreTeamB += POINT_FOR_FREE_THROW;
+        displayForTeamB(scoreTeamB);
+    }
+
     private void displayForTeamA(int score) {
         TextView scoreTeamA = (TextView) findViewById(R.id.tv_team_a_score);
         scoreTeamA.setText(String.valueOf(score));
+    }
+
+    private void displayForTeamB(int score) {
+        TextView scoreTeamB = (TextView) findViewById(R.id.tv_team_b_score);
+        scoreTeamB.setText(String.valueOf(score));
     }
 }
