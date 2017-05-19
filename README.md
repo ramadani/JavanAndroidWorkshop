@@ -8,6 +8,7 @@
 
 From lesson 7 on [Android Development For Beginner][udacity_link]
 
+<img src="image.png" width="340">
 
 ## Previous
 
