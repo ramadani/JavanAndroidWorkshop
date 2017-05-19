@@ -4,11 +4,9 @@
 
 —Confucius
 
-## Court Counter
+## Just Java v2
 
-From lesson 7 on [Android Development For Beginner][udacity_link]
-
-<img src="image.png" width="340">
+From lesson 8 on [Android Development For Beginner][udacity_link]
 
 ## Previous
 

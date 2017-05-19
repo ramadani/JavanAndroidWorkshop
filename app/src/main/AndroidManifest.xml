@@ -11,14 +11,14 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Learn1Activity" />
         <activity android:name=".BirthdayCardActivity" />
-        <activity android:name=".JustJavaActivity" />
-        <activity android:name=".CourtCounterActivity">
+        <activity android:name=".JustJavaActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CourtCounterActivity" />
     </application>
 
 </manifest>

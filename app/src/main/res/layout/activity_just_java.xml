@@ -47,10 +47,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/fab_margin"
         android:textAllCaps="true"
-        android:text="@string/price" />
+        android:text="@string/order_summary" />
 
     <TextView
-        android:id="@+id/tv_price"
+        android:id="@+id/tv_order_summary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/fab_margin"

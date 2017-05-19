@@ -13,31 +13,45 @@ public class JustJavaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_just_java);
         setTitle(R.string.just_java);
-        display(quantity);
+        displayQuantity(quantity);
     }
 
     public void submitOrder(View view) {
-        String priceMessage = "Total: $" + (quantity * 5) + "\nThank you!";
+        int price = calculatePrice(quantity);
+        String priceMessage = createOrderSummary("Ramadani", price);
         displayMessage(priceMessage);
     }
 
     public void increment(View view) {
         quantity = quantity + 1;
-        display(quantity);
+        displayQuantity(quantity);
     }
 
     public void decrement(View view) {
         quantity = quantity - 1;
-        display(quantity);
+        displayQuantity(quantity);
     }
 
-    private void display(int number) {
+    private void displayQuantity(int numberOfCoffees) {
         TextView tvQuantity = (TextView) findViewById(R.id.tv_quantity);
-        tvQuantity.setText(String.valueOf(number));
+        tvQuantity.setText(String.valueOf(numberOfCoffees));
     }
 
     private void displayMessage(String message) {
-        TextView tvPrice = (TextView) findViewById(R.id.tv_price);
-        tvPrice.setText(message);
+        TextView tvOrderSummary = (TextView) findViewById(R.id.tv_order_summary);
+        tvOrderSummary.setText(message);
+    }
+
+    private int calculatePrice(int quantity) {
+        int price = quantity * 5;
+        return price;
+    }
+
+    private String createOrderSummary(String fullName, int price) {
+        String orderSummary = "Name: " + fullName
+                + "\nQuantity: " + quantity
+                + "\nTotal: $" + price;
+
+        return orderSummary + "\nThank you!";
     }
 }

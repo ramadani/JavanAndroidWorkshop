@@ -8,7 +8,7 @@
 
     <string name="just_java">Just Java</string>
     <string name="quantity">Quantity</string>
-    <string name="price">Price</string>
+    <string name="order_summary">Order Summary</string>
     <string name="order">Order</string>
 
     <string name="court_counter">Court Counter</string>
