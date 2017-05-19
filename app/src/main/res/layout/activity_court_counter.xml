@@ -23,14 +23,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/fab_margin"
                 android:text="Team A" />
 
             <TextView
                 android:id="@+id/tv_team_a_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/fab_margin"
+                style="@style/ScoreText"
                 android:text="0" />
 
             <Button
@@ -73,14 +72,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/fab_margin"
                 android:text="Team B" />
 
             <TextView
                 android:id="@+id/tv_team_b_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/fab_margin"
+                style="@style/ScoreText"
                 android:text="0" />
 
             <Button
