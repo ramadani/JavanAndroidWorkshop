@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class JustJavaActivity extends AppCompatActivity {
@@ -31,6 +32,9 @@ public class JustJavaActivity extends AppCompatActivity {
     }
 
     public void submitOrder(View view) {
+        EditText etName = (EditText) findViewById(R.id.tv_name);
+        String name = etName.getText().toString();
+
         CheckBox cbWhippedCream = (CheckBox) findViewById(R.id.cb_whipped_cream);
         boolean hasWhippedCream = cbWhippedCream.isChecked();
 
@@ -38,8 +42,8 @@ public class JustJavaActivity extends AppCompatActivity {
         boolean hasChocolate = cbChocolate.isChecked();
 
         int price = calculatePrice(quantity);
-        String priceMessage = createOrderSummary("Ramadani", price, hasWhippedCream,
-                hasChocolate);
+        String priceMessage = createOrderSummary(name, price, hasWhippedCream, hasChocolate);
+
         displayMessage(priceMessage);
     }
 
@@ -60,15 +64,15 @@ public class JustJavaActivity extends AppCompatActivity {
 
     /**
      * Create summary of the order
-     * @param fullName fullName of the order
+     * @param name name of the order
      * @param price price of the order
      * @param addWhippedCream is whether or not the user wants whipped cream topping
      * @param addChocolate is whether or not the user wants chocolate topping
      * @return text summary
      */
-    private String createOrderSummary(String fullName, int price, boolean addWhippedCream,
+    private String createOrderSummary(String name, int price, boolean addWhippedCream,
                                       boolean addChocolate) {
-        String orderSummary = "Name: " + fullName
+        String orderSummary = "Name: " + name
                 + "\nAdd Whipped Cream? " + addWhippedCream
                 + "\nAdd Chocolate? " + addChocolate
                 + "\nQuantity: " + quantity
