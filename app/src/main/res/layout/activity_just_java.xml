@@ -10,7 +10,23 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/toppings"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textAllCaps="true" />
+
+    <CheckBox
+        android:id="@+id/cb_whipped_cream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:text="Whipped Cream"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/quantity"
+        android:layout_marginTop="@dimen/fab_margin"
         android:layout_marginBottom="@dimen/fab_margin"
         android:textAllCaps="true" />
 
