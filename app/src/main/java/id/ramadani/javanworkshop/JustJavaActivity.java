@@ -1,5 +1,7 @@
 package id.ramadani.javanworkshop;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +10,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import static android.R.attr.name;
 
 public class JustJavaActivity extends AppCompatActivity {
     private final static String LOG_TAG = JustJavaActivity.class.getSimpleName();
@@ -56,19 +60,14 @@ public class JustJavaActivity extends AppCompatActivity {
         boolean hasChocolate = cbChocolate.isChecked();
 
         int price = calculatePrice(hasWhippedCream, hasChocolate);
-        String priceMessage = createOrderSummary(name, price, hasWhippedCream, hasChocolate);
+        String orderSummary = createOrderSummary(name, price, hasWhippedCream, hasChocolate);
 
-        displayMessage(priceMessage);
+        sendTo(orderSummary);
     }
 
     private void displayQuantity(int numberOfCoffees) {
         TextView tvQuantity = (TextView) findViewById(R.id.tv_quantity);
         tvQuantity.setText(String.valueOf(numberOfCoffees));
-    }
-
-    private void displayMessage(String message) {
-        TextView tvOrderSummary = (TextView) findViewById(R.id.tv_order_summary);
-        tvOrderSummary.setText(message);
     }
 
     private int calculatePrice(boolean addWhippedCream, boolean addChocolate) {
@@ -102,5 +101,15 @@ public class JustJavaActivity extends AppCompatActivity {
                 + "\nTotal: $" + price;
 
         return orderSummary + "\nThank you!";
+    }
+
+    private void sendTo(String text) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:"));
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Just Java order for " + name);
+        intent.putExtra(Intent.EXTRA_TEXT, text);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 }
