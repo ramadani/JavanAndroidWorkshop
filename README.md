@@ -8,6 +8,8 @@
 
 From lesson 8 on [Android Development For Beginner][udacity_link]
 
+<img src="image.png" width="340">
+
 ## Previous
 
 1. [TextView and ImageView][learn_1]
