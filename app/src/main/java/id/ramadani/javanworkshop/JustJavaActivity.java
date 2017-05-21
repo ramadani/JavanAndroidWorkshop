@@ -41,7 +41,7 @@ public class JustJavaActivity extends AppCompatActivity {
         CheckBox cbChocolate = (CheckBox) findViewById(R.id.cb_chocolate);
         boolean hasChocolate = cbChocolate.isChecked();
 
-        int price = calculatePrice(quantity);
+        int price = calculatePrice(hasWhippedCream, hasChocolate);
         String priceMessage = createOrderSummary(name, price, hasWhippedCream, hasChocolate);
 
         displayMessage(priceMessage);
@@ -57,9 +57,18 @@ public class JustJavaActivity extends AppCompatActivity {
         tvOrderSummary.setText(message);
     }
 
-    private int calculatePrice(int quantity) {
-        int price = quantity * 5;
-        return price;
+    private int calculatePrice(boolean addWhippedCream, boolean addChocolate) {
+        int basePrice = 5;
+
+        if (addWhippedCream) {
+            basePrice += 1;
+        }
+
+        if (addChocolate) {
+            basePrice += 2;
+        }
+
+        return basePrice * quantity;
     }
 
     /**
