@@ -34,8 +34,12 @@ public class JustJavaActivity extends AppCompatActivity {
         CheckBox cbWhippedCream = (CheckBox) findViewById(R.id.cb_whipped_cream);
         boolean hasWhippedCream = cbWhippedCream.isChecked();
 
+        CheckBox cbChocolate = (CheckBox) findViewById(R.id.cb_chocolate);
+        boolean hasChocolate = cbChocolate.isChecked();
+
         int price = calculatePrice(quantity);
-        String priceMessage = createOrderSummary("Ramadani", price, hasWhippedCream);
+        String priceMessage = createOrderSummary("Ramadani", price, hasWhippedCream,
+                hasChocolate);
         displayMessage(priceMessage);
     }
 
@@ -54,9 +58,19 @@ public class JustJavaActivity extends AppCompatActivity {
         return price;
     }
 
-    private String createOrderSummary(String fullName, int price, boolean addWhippedCream) {
+    /**
+     * Create summary of the order
+     * @param fullName fullName of the order
+     * @param price price of the order
+     * @param addWhippedCream is whether or not the user wants whipped cream topping
+     * @param addChocolate is whether or not the user wants chocolate topping
+     * @return text summary
+     */
+    private String createOrderSummary(String fullName, int price, boolean addWhippedCream,
+                                      boolean addChocolate) {
         String orderSummary = "Name: " + fullName
                 + "\nAdd Whipped Cream? " + addWhippedCream
+                + "\nAdd Chocolate? " + addChocolate
                 + "\nQuantity: " + quantity
                 + "\nTotal: $" + price;
 

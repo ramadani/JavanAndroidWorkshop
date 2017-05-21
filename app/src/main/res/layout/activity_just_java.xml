@@ -23,8 +23,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="24dp"
-            android:text="Whipped Cream"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:text="Whipped Cream" />
+
+        <CheckBox
+            android:id="@+id/cb_chocolate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:textSize="16sp"
+            android:text="Chocolate" />
 
         <TextView
             android:layout_width="wrap_content"
