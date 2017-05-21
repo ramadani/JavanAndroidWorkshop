@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -94,13 +93,13 @@ public class JustJavaActivity extends AppCompatActivity {
      */
     private String createOrderSummary(String name, int price, boolean addWhippedCream,
                                       boolean addChocolate) {
-        String orderSummary = "Name: " + name
+        String orderSummary = getString(R.string.order_summary_name, name)
                 + "\nAdd Whipped Cream? " + addWhippedCream
                 + "\nAdd Chocolate? " + addChocolate
                 + "\nQuantity: " + quantity
                 + "\nTotal: $" + price;
 
-        return orderSummary + "\nThank you!";
+        return orderSummary + "\n" + getString(R.string.thank_you);
     }
 
     private void sendTo(String text) {
